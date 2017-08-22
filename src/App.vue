@@ -1,18 +1,19 @@
 <template>
   <div id="app">
-    
-    
+    <router-view></router-view>
   </div>
 </template>
-
 <script>
-
+import 'normalize.css'
 export default {
-  components:{}
+  name: 'app'
 }
-</script>
 
-<style>
+</script>
+<style lang="less">
+.html{
+  font-size:32px
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
