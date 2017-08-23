@@ -37,9 +37,10 @@ export default {
 .nav-left {
   float:left;
   height:70/32rem;
-  width:400/32rem;
+  width:300/32rem;
   line-height:70/32rem;
   li {
+    font-size:25/32rem;
     height:70/32rem;
     width:33.3%;
     line-height:70/32rem;
@@ -83,6 +84,7 @@ export default {
   width: 50/32rem;
   font-size:20/32rem;
   line-height: 50/32rem;
+  margin-right: 10/32rem;
 }
 
 .clearfix:before, clearfix:after {

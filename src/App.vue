@@ -11,8 +11,8 @@ export default {
 
 </script>
 <style lang="less">
-.html{
-  font-size:32px
+html{
+  font-size:32px;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
