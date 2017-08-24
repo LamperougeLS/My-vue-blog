@@ -33,14 +33,17 @@ export default {
   width: 750/32rem;
   margin: 0 auto;
   height: 70/32rem;
+  border: 1px black solid;
 }
 .nav-left {
   float:left;
+  margin-left: 20/32rem;
   height:70/32rem;
   width:300/32rem;
   line-height:70/32rem;
   li {
-    font-size:25/32rem;
+    box-sizing: border-box;
+    font-size:20/32rem;
     height:70/32rem;
     width:33.3%;
     line-height:70/32rem;
@@ -64,12 +67,13 @@ export default {
     display:block;
     position:absolute;
     left: 10/32rem;
-    top:5/32rem;
-    height: 40/32rem;
-    width: 40/32rem;
+    top:8/32rem;
+    height: 30/32rem;
+    width: 30/32rem;
   }
   input{
-    padding-left: 50/32rem;
+    border: 1px black solid;
+    padding-left: 40/32rem;
     width:210/32rem;
     height: 40/32rem;
     outline: 0;
@@ -87,7 +91,7 @@ export default {
   margin-right: 10/32rem;
 }
 
-.clearfix:before, clearfix:after {
+/* .clearfix:before, clearfix:after {
     content: ".";
     display: block;
     clear: both;
@@ -97,6 +101,6 @@ export default {
     font-size:0;    //字体大小为0
 }
 
-.clearfix { *zoom:1;}
+.clearfix { *zoom:1;} */
 
 </style>
