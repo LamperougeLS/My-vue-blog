@@ -1,6 +1,6 @@
 <template>
-  <nav class="topNav clearfix">
-    <div class="nav-left clearfix">
+  <nav class="topNav">
+    <div class="nav-left">
       <li><i></i>首页</li>
       <li><i></i>留言板</li>
       <li><i></i>关于</li>
@@ -11,7 +11,7 @@
         <input type="text" placeholder="请输入搜索内容">
       </div>
       <div class="user-login">
-          <span>登录</span>
+          登录
       </div>
     </div>
   </nav>
@@ -32,21 +32,20 @@ export default {
 .topNav{
   width: 750/32rem;
   margin: 0 auto;
-  height: 70/32rem;
-  border: 1px black solid;
+  height: 60/32rem;
+  border: 1/32rem black solid;
 }
 .nav-left {
   float:left;
   margin-left: 20/32rem;
-  height:70/32rem;
+  height:100%;
   width:300/32rem;
-  line-height:70/32rem;
   li {
     box-sizing: border-box;
-    font-size:20/32rem;
-    height:70/32rem;
+    font-size:15/32rem;
+    height:60/32rem;
     width:33.3%;
-    line-height:70/32rem;
+    line-height:60/32rem;
     display: block;
     float: left;
 
@@ -55,8 +54,8 @@ export default {
 
 .nav-right {
   margin-top:10/32rem;
-  height:50/32rem;
   float:right;
+  height:40/32rem;
   width:350/32rem;
 }
 
@@ -72,23 +71,27 @@ export default {
     width: 30/32rem;
   }
   input{
-    border: 1px black solid;
+    box-sizing:border-box;
+    position:absolute;
+    left:0;
+    top:0;
+    padding: 0;
+    border: 1/32rem black solid;
     padding-left: 40/32rem;
     width:210/32rem;
-    height: 40/32rem;
     outline: 0;
-    line-height: 50/32rem;
-    font-size:20/32rem;
+    height:40/32rem;
+    font-size:15/32rem;
   }
 }
 
 .user-login {
   float:right;
-  height:50/32rem;
-  width: 50/32rem;
-  font-size:20/32rem;
-  line-height: 50/32rem;
-  margin-right: 10/32rem;
+  height:40/32rem;
+  width: 40/32rem;
+  font-size:10/32rem;
+  line-height: 40/32rem;
+  margin-right: 20/32rem;
 }
 
 /* .clearfix:before, clearfix:after {
