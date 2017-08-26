@@ -65,8 +65,8 @@ export default {
   i{
     display:block;
     position:absolute;
-    left: 10/32rem;
-    top:8/32rem;
+    left: 5/32rem;
+    top:5/32rem;
     height: 30/32rem;
     width: 30/32rem;
   }
@@ -75,10 +75,9 @@ export default {
     position:absolute;
     left:0;
     top:0;
-    padding: 0;
     border: 1/32rem black solid;
     padding-left: 40/32rem;
-    width:210/32rem;
+    width:250/32rem;
     outline: 0;
     height:40/32rem;
     font-size:15/32rem;
