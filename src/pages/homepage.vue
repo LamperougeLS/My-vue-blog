@@ -1,17 +1,14 @@
 <template>
-   <div id='home'>
+   <div id='homepage'>
       <TopNav></TopNav>
-      <TagList></TagList>
-      <ArticleList></ArticleList>
+      <router-view></router-view>
    </div>
 </template>
 
 <script>
 import TopNav from '../components/TopNav.vue'
-import TagList from '../components/TagList.vue'
-import ArticleList from '../components/ArticleList.vue'
 export default {
-  components: {TopNav, TagList, ArticleList}
+  components: {TopNav}
 }
 </script>
 

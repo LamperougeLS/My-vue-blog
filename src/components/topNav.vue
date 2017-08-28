@@ -30,6 +30,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 .topNav {
+  box-sizing:border-box;
   width:100%;
   margin: 0 auto;
   height: 60/32rem;
@@ -87,10 +88,10 @@ export default {
 .user-login {
   float: right;
   height: 40/32rem;
-  width: 40/32rem;
-  font-size: 8/32rem;
+  width: 80/32rem;
+  font-size: 10/32rem;
   line-height: 40/32rem;
-  margin-right: 20/32rem;
+  margin-right: 10/32rem;
 }
 
 
