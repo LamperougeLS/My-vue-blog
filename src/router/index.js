@@ -2,24 +2,24 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import homepage from '../pages/homepage'
 import home from '../pages/home'
-import classify from '../pages/classify'
+import messageboard from '../pages/messageboard'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [{
-    path: '/',
-    name: 'homepage',
-    component: homepage,
-    children: [
-      { path: '/home',
-        component: home
-      },
-      {
-        path: '/classify',
-        component: classify
-      }
-    ]
-  }]
+  routes: [
+    { path: '/',
+      redirect: '/home'
+    },
+    { path: '/home',
+      name: 'home',
+      component: home,
+      children: [
+        { path: '/',
+          component: homepage
+        },
+        { path: '/messageboard',
+          component: messageboard}]
+    }]
 })
 

@@ -20,6 +20,7 @@ export default {
   color: #2c3e50;
   margin:0 auto;
   max-width: 1080/32rem;
+  height: 100%;
   }
 li{
  list-style-type: none;

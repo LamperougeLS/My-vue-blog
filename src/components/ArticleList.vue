@@ -1,14 +1,13 @@
 <template>
-  <div id="articleList">
+  <div id="article-list">
     <ul v-if='articleList.length'>
       <!-- <router-link to="{name:'article',params:{}}" v-for='article in articleList'> -->
         <div class='article-content' v-for='article in articleList'>
           <header>
-            <span class='article-title'>{{article.title}}</span>
+            <div class='article-title'>{{article.title}} <span class='article-tag'>{{'[分类：'+article.tag+']'}}</span></div>
             <span class='article-date'>日期： {{article.date}}</span>
           </header>
           <article>
-            <p class='article-tag'>分类：{{article.tag}}</p>
             <p class="article-abstract">{{article.abstract + '...'}}</p>
           </article>
         </div>
@@ -32,10 +31,11 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style  lang='less' scoped>
-#articleList {
+#article-list {
   box-sizing: border-box;
   padding: 5/32rem 10/32rem;
   background-color: #ebf0f0;
+  height: 100%;
 }
 .article-content{
   background-color: #fff;
@@ -65,9 +65,11 @@ export default {
   left:0;
 }
 .article-tag{
-  font-size:15/32rem;
-  text-align:left;
+  font-size:25/32rem;
   text-indent:.5rem;
+  color:#ADA3A3;
+  font-weight: 400;
+  vertical-align: center;
 }
 .article-date{
   font-size:15/32rem;

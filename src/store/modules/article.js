@@ -1,13 +1,13 @@
 import
 
 const state = {
-  tags: '',
+  tagList: '',
   articleList: ''
 }
 
 const mutations = {
   [GET_ARTICLE](state, data) {
-    state.tags = data.tags
+    state.tagList = data.tagList
     state.articleList = data.articleList
   },
   [GET_ARTICLE_FAILURE](state) {

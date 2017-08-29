@@ -2,7 +2,7 @@
   <nav class="topNav">
     <div class="nav-left">
       <li><i></i>首页</li>
-      <li><i></i>留言板</li>
+      <li><i></i>留言</li>
       <li><i></i>关于</li>
     </div>
     <div class="nav-right">
@@ -54,7 +54,8 @@ export default {
 }
 
 .nav-right {
-  margin-top: 10/32rem;
+  box-sizing:border-box;
+  margin-top: 9/32rem;
   float: right;
   height: 40/32rem;
   width: 350/32rem;
@@ -81,7 +82,7 @@ export default {
     width: 250/32rem;
     outline: 0;
     height: 40/32rem;
-    font-size: 15/32rem;
+    font-size: 12/32rem;
   }
 }
 
