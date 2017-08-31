@@ -1,32 +1,42 @@
 <template>
   <div id="message-list">
+    
     <ul v-if='messageList.length'>
       <!-- <router-link to="{name:'article',params:{}}" v-for='article in articleList'> -->
       <div class='message-content' v-for='message in messageList'>
-        <header>
-          <p class='message-title ellipsis'>{{message.title}}</p>
+        <header class='message-title ellipsis'>{{message.title}}
         </header>
-        <section>
+      <article>
+        <P class='message-detail'>{{message.detail}}</P>
+      </article>
+        <footer>
           <span class='message-author'>作者:{{message.author}}</span>
-          <span class='message-date'>日期:{{message.date}}&nbsp&nbsp&nbsp&nbsp回复:{{message.replies}}</span>
-        </section>
+          <span class='message-date'>日期:{{message.date}}</span>
+        </footer>
       </div>
       <!-- </router-link> -->
     </ul>
     <section id='other-button'><span>刷新</span><span>留言</span></section>
+    <section id='reply'>
+      <label for="">标题：</label><input id='reply-title' type="text" >
+      <label for="">姓名: </label><input id='reply-author'type="text">
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <button>提交</button><button>清空</button>
+    </section>
   </div>
 </template>
 <script>
 export default {
   data () {
     return {
-      messageList: [ {title: '文章saddasfdASDasfhoaihfoiahsfoiahsfiohaosifhoais', author: 'name', date: '2017-1-1', replies: 9},
-        {title: '文章saddasfdASDasfhoaihfoiahsfoiahsfiohaosifhoais', author: 'name', date: '2017-1-1', replies: 9},
-        {title: '文章saddasfdASDasfhoaihfoiahsfoiahsfiohaosifhoais', author: 'name', date: '2017-1-1', replies: 9},
-        {title: '文章saddasfdASDasfhoaihfoiahsfoiahsfiohaosifhoais', author: 'name', date: '2017-1-1', replies: 9},
-        {title: '文章saddasfdASDasfhoaihfoiahsfoiahsfiohaosifhoais', author: 'name', date: '2017-1-1', replies: 9},
-        {title: '文章saddasfdASDasfhoaihfoiahsfoiahsfiohaosifhoais', author: 'name', date: '2017-1-1', replies: 9},
-        {title: '文章saddasfdASDasfhoaihfoiahsfoiahsfiohaosifhoais', author: 'name', date: '2017-1-1', replies: 9}
+      newmessage: {title: '', author: '', date: ''},
+      messageList: [ {title: '文章saddasfdASDasfhoaihfoiahsfoiahsf', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字'},
+        {title: '文章saddasfdASDasfhoaihfoiahsfoiahsfiohaosi', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字'},
+        {title: '文章saddasfdASDasfhoaihfoiahsfoiahsfioh', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字'},
+        {title: '文章saddasfdASDasfhoaihfoiahsfoiahsfiohao', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字'},
+        {title: '文章saddasfdASDasfhoaihfoiahsfoiahsfioha', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字'},
+        {title: '文章saddasfdASDasfhoaihfoiahsfoiahsfiohaosi', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字'},
+        {title: '文章saddasfdASDasfhoaihfoiahsfoiahsfiohaosifh', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字'}
       ]
     }
   }
@@ -40,20 +50,31 @@ export default {
   padding: 5/32rem 10/32rem;
   background-color: #ebf0f0;
   height: 100%;
+  width:100%;
   position:relative;
+}
+#reply{
+  position:fixed;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+}
+#reply-title,#reply-author{
+  width:5rem;
 }
 
 #other-button{
 	position:fixed;
-	right:10/32rem;
+	right:5/32rem;
 	bottom:0;
-	width:160/32rem;
-	height:80/32rem;
 	span{
-		width:50%;
+		display: inline-block;
+		width:80/32rem;
+		height: 50/32rem;
+		line-height: 50/32rem;
 		border:2/32rem solid #C4B7B7;
-		border-radius: 80/32rem;
-		font-size:20/32rem;
+		border-radius: 20/32rem;
+		font-size:25/32rem;
 		margin-right: 10/32rem;
 	}
 }
@@ -65,18 +86,26 @@ export default {
   padding:20/32rem 40/32rem;
   margin-top:5/32rem;
   header{
-  	width:100%;
-	margin-bottom:25/32rem;
+	margin-bottom:20/32rem;
 	height:30/32rem;
 	line-height: 30/32rem;
   }
-  section{
+  footer{
   	position: relative;
-  	width: 100%;
   	height:30/32rem;
   	line-height: 30/32rem;
   }
 }
+
+.message-detail{
+    text-align:left;
+    white-space:normal;
+    word-break:break-all;
+    word-wrap:break-word;
+    text-indent: 1rem;
+    margin-bottom:25/32rem;
+    line-height: 35/32rem;
+  }
 
 .message-author{
 	position:absolute;

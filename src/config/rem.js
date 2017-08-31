@@ -6,11 +6,11 @@
   var recalc = function () {
     var clientWidth = docEL.clientWidth
     if (!clientWidth) return
-    if (clientWidth >= 1080) { docEL.style.fontSize = 32 * (1080 / 750) + 'px' } else { docEL.style.fontSize = 32 * (clientWidth / 750) + 'px' }
+    else if (clientWidth >= 1080) { docEL.style.fontSize = 32 * (1080 / 750) + 'px' } else { docEL.style.fontSize = 32 * (clientWidth / 750) + 'px' }
   }
 
   if (!docEL.addEventListener) return
   // 添加事件监听
   win.addEventListener(resizeEvt, recalc, false)
-  doc.addEventListener('DomContentLoaded', recalc, false)
+  doc.addEventListener('DOMContentLoaded', recalc, false)
 })(document, window)
