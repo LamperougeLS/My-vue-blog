@@ -17,13 +17,7 @@
       <!-- </router-link> -->
     </ul>
     <section id='other-button'><span>刷新</span><span>留言</span></section>
-    <section id='reply'>
-      <label for="">标题：</label><input id='reply-title' type="text" >
-      <label for="">姓名: </label><input id='reply-author'type="text">
-      <textarea name="" id="" cols="30" rows="10"></textarea>
-      <button>提交</button><button>清空</button>
-    </section>
-  </div>
+    </div>
 </template>
 <script>
 export default {

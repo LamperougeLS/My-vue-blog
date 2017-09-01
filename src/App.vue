@@ -1,13 +1,16 @@
 <template>
   <div id="app">
     <router-view></router-view>
+    <modal></modal>
   </div>
 </template>
 <script>
 import 'normalize.css'
+import modal from './components/modal.vue'
 
 export default {
-  name: 'app'
+  name: 'app',
+  components: {modal}
 }
 
 </script>
