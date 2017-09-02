@@ -1,11 +1,13 @@
 <template>
-  <div id='modal'>
+  <div v-if='replyshow' id='modal'>
     <section id='reply'>
-      <input id='reply-title' type="text" placeholder="请输入标题">
-      <input id='reply-author' type="text" placeholder="请输入标题">
-      <textarea name="" id="reply-content"></textarea>
+      <input id='reply-title' type="text" placeholder=" 标题">
+      <input id='reply-author' type="text" placeholder=" 名字">
+      <textarea name="" id="reply-content" placeholder=" 留言内容"></textarea>
+      <span id='reply-button'>
       <button>提交</button>
       <button>清空</button>
+      </span>
     </section>
   </div>
 </template>
@@ -13,6 +15,7 @@
 export default {
   data () {
     return {
+      replyshow: false,
       newmessage: { title: '', author: '', date: '' }
     }
   }
@@ -34,7 +37,8 @@ export default {
 }
 
 #reply {
-  width:350/32rem;
+  font-size:0;
+  width:400/32rem;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -43,13 +47,28 @@ export default {
   border:1/32rem solid black;
 }
 
-#reply-reply {
+#reply-content {
+  box-sizing:border-box;
   width: 100%;
+  height:8rem;
+  font-size:20/32rem;
+  resize: none;
 }
 
+#reply-button{
+  width: 100%;
+  button{
+    width:50%;
+    height:1rem;
+    font-size:20/32rem;
+  }
+}
 #reply-title,
 #reply-author {
   width:100%;
+  box-sizing:border-box;
+  font-size: 20/32rem;
+  height:1rem;
 }
 
 </style>
