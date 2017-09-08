@@ -20,20 +20,9 @@
     </div>
 </template>
 <script>
+import 
 export default {
-  data () {
-    return {
-      newmessage: {title: '', author: '', date: ''},
-      messageList: [ {title: '文章saddasfdASDasfhoaihfoiahsfoiahsf', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字'},
-        {title: '文章saddasfdASDasfhoaihfoiahsfoiahsfiohaosi', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字'},
-        {title: '文章saddasfdASDasfhoaihfoiahsfoiahsfioh', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字'},
-        {title: '文章saddasfdASDasfhoaihfoiahsfoiahsfiohao', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字'},
-        {title: '文章saddasfdASDasfhoaihfoiahsfoiahsfioha', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字'},
-        {title: '文章saddasfdASDasfhoaihfoiahsfoiahsfiohaosi', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字'},
-        {title: '文章saddasfdASDasfhoaihfoiahsfoiahsfiohaosifh', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字'}
-      ]
-    }
-  }
+  
 }
 
 </script>
