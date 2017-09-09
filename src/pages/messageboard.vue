@@ -20,9 +20,12 @@
     </div>
 </template>
 <script>
-import 
+import {mapState} from 'vuex'
+
 export default {
-  
+  computed: mapState {
+    messageList : state =>
+  }
 }
 
 </script>

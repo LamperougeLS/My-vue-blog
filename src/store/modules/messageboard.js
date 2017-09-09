@@ -18,5 +18,16 @@ const mutations = {
   },
   [types.GET_MESSAGE_FAILURE] (state) {
     return state
+  },
+  [types.SET_NEW_MESSAGE] (state, data) {
+    state.nemessage = data.newmessage
+  },
+  [types.SET_NEW_MESSAGE_FAILURE] (state, data) {
+    return state
   }
+}
+
+export default {
+  state,
+  mutations
 }
