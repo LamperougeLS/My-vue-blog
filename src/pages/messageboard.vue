@@ -23,8 +23,10 @@
 import {mapState} from 'vuex'
 
 export default {
-  computed: mapState {
-    messageList : state =>
+  computed: {
+    ...mapState({
+      messageList : state => state.messageList
+    })
   }
 }
 
