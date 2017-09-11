@@ -1,27 +1,13 @@
 <template>
   <div id='tagList'>
-   	<!--  <router-link :to="{name:'directory',params:{tagName：tag.id}}" v-for='tag in tagList'> -->
+   	 <router-link :to="{name:'directory',params:{tagName：tag.id}}" v-for='tag in tagList'>
       <li v-for='tag in tagList' class='tag'>{{tag.name}}</li>
-    <!-- </router-link> -->
+    </router-link>
   </div>
 </template>
 <script>
-export default {
-  data () {
-    return {
-      tagList: [{ name: '全部', id: 'all' },
-        { name: 'VUE', id: 'vue' },
-        { name: 'REACT', id: 'react' },
-        { name: '热门', id: 'hot' },
-        { name: 'ES6', id: 'es6' },
-        { name: 'WEBPACK', id: 'webpack' },
-        { name: 'REACT', id: 'react' },
-        { name: '热门', id: 'hot' },
-        { name: 'ES6', id: 'es6' }
-      ]
-    }
-  }
-}
+import { mapState } from 'vuex'
+export default { computed: { ...mapState({ tagList: state => state.homepage.tagList }) } }
 
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->

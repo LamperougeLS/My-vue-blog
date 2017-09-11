@@ -1,6 +1,5 @@
 <template>
   <div id="message-list">
-    
     <ul v-if='messageList.length'>
       <!-- <router-link to="{name:'article',params:{}}" v-for='article in articleList'> -->
       <div class='message-content' v-for='message in messageList'>
@@ -16,6 +15,7 @@
       </div>
       <!-- </router-link> -->
     </ul>
+    <span v-else>没有新消息</span>
     <section id='other-button'><span>刷新</span><span>留言</span></section>
     </div>
 </template>
@@ -25,7 +25,7 @@ import {mapState} from 'vuex'
 export default {
   computed: {
     ...mapState({
-      messageList : state => state.messageList
+      messageList: state => state.messageboard.messageList
     })
   }
 }
