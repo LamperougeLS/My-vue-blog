@@ -1,9 +1,9 @@
 <template>
   <nav class="topNav">
     <div class="nav-left">
-      <router-link to='/homepage'><li><i></i>首页</li>
-      <router-link to='/messageboard'><li><i></i>留言</li>
-      <router-link to='/about'><li><i></i>关于</li>
+      <router-link to='/homepage'><li><i></i>首页</li></router-link>
+      <router-link to='/messageboard'><li><i></i>留言</li></router-link>
+      <router-link to='/about'><li><i></i>关于</li></router-link>
     </div>
     <div class="nav-right">
       <div class="search-input">

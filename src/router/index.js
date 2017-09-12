@@ -8,18 +8,12 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    { path: '/',
-      redirect: '/home'
-    },
-    { path: '/home',
-      name: 'home',
-      component: home,
-      children: [
-        { path: '/',
+       { path: '/homepage',
           component: homepage
         },
-        { path: '/messageboard',
+      { path: '/messageboard',
           component: messageboard}]
-    }]
+    }
+  ]
 })
 
