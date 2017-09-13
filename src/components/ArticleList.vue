@@ -1,27 +1,33 @@
 <template>
   <div id="article-list">
-    <ul v-if='articleList.length'>
       <!-- <router-link to="{name:'article',params:{}}" v-for='article in articleList'> -->
-        <div class='article-content' v-for='article in articleList'>
+        <div class='article-content'>
           <header>
-            <div class='article-title'>{{article.title}} <span class='article-tag'>{{'[分类：'+article.tag+']'}}</span></div>
-            <span class='article-date'>日期： {{article.date}}</span>
+            <div class='article-title'>{{title}} <span class='article-tag'>{{'[分类：'+tag+']'}}</span></div>
+            <span class='article-date'>日期： {{date}}</span>
           </header>
           <article>
-            <p class="article-abstract">{{article.abstract + '...'}}</p>
+            <p class="article-abstract">{{abstract + '...'}}</p>
           </article>
         </div>
       <!-- </router-link> -->
-    </ul>
   </div>
 </template>
 <script>
-import {mapState} from 'vuex'
 export default {
-  computed: {
-    ...mapState({
-      articleList: state => state.homepage.articleList
-    })
+  props: {
+    'title': {
+      default: '标题'
+    },
+    'tag': {
+      default: '分类'
+    },
+    'date': {
+      default: 'xxxx-xx-xx'
+    },
+    'abstract': {
+      default: '摘要内容'
+    }
   }
 }
 

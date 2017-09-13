@@ -1,7 +1,7 @@
 <template>
   <div id='tagList'>
    	<!--  <router-link :to="{name:'directory',params:{tagName：tag.id}}" v-for='tag in tagList'> -->
-      <li v-for='tag in tagList' class='tag'>{{tag.name}}</li>
+      <li class='tag' v-for='(tag, index) in tagList' :key='index' >{{tag.name}}</li>
     <!-- </router-link> -->
   </div>
 </template>
