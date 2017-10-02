@@ -27,6 +27,10 @@ export default {
     ...mapState({
       messageList: state => state.messageboard.messageList
     })
+  },
+
+  created () {
+    this.$store.dispatch('getMessageList')
   }
 }
 
@@ -93,6 +97,7 @@ export default {
     text-indent: 1rem;
     margin-bottom:25/32rem;
     line-height: 35/32rem;
+    font-size:20/32rem;
   }
 
 .message-author{
@@ -103,7 +108,7 @@ export default {
 .message-title {
   width:70%;
   text-align: left;
-  font-size: 30/32rem;
+  font-size: 25/32rem;
 }
 
 .message-date {

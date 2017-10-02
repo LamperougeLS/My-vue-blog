@@ -1,3 +1,4 @@
+<!-- 废弃 -->
 <template>
   <div id='tagList'>
    	<!--  <router-link :to="{name:'directory',params:{tagName：tag.id}}" v-for='tag in tagList'> -->
@@ -30,8 +31,8 @@ export default { computed: { ...mapState({ tagList: state => state.homepage.tagL
 }
 
 #tagList::-webkit-scrollbar{
-	/* width:0;
-	height:0; */
+	 width:0;
+	height:0; 
 }
 
 

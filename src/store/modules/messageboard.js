@@ -1,33 +1,36 @@
 import * as types from '../mutation-types.js'
+import mockdata from '../../API/mockdata.js'
 
 const state = {
-  newmessage: { title: '', author: '', date: '' },
-  messageList: [{ title: '文章saddasfdASDasfhoaihfoiahsfoiahsf', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字' },
-    { title: '文章saddasfdASDasfhoaihfoiahsfoiahsfiohaosi', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字' },
-    { title: '文章saddasfdASDasfhoaihfoiahsfoiahsfioh', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字' },
-    { title: '文章saddasfdASDasfhoaihfoiahsfoiahsfiohao', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字' },
-    { title: '文章saddasfdASDasfhoaihfoiahsfoiahsfioha', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字' },
-    { title: '文章saddasfdASDasfhoaihfoiahsfoiahsfiohaosi', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字' },
-    { title: '文章saddasfdASDasfhoaihfoiahsfoiahsfiohaosifh', author: 'name', date: '2017-1-1', detail: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字' }
-  ]
+  newmessage: {},
+  messageList: []
 }
 
 const mutations = {
-  [types.GET_MESSAGE] (state, data) {
-    state.messageList = data.messageList
+  [types.GET_MESSAGE] (state, messageList) {
+    state.messageList = messageList
   },
   [types.GET_MESSAGE_FAILURE] (state) {
     return state
   },
   [types.SET_NEW_MESSAGE] (state, data) {
-    state.nemessage = data.newmessage
+    state.nemessage = data
   },
   [types.SET_NEW_MESSAGE_FAILURE] (state, data) {
     return state
   }
 }
 
+const actions = {
+  getMessageList ({commit}) {
+    mockdata.getMessage(data => {
+      commit(types.GET_MESSAGE, data)
+    })
+  }
+}
+
 export default {
   state,
-  mutations
+  mutations,
+  actions
 }
