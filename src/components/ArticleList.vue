@@ -36,7 +36,7 @@ export default {
 <style  lang='less' scoped>
 #article-list {
   box-sizing: border-box;
-  padding: 5/32rem 10/32rem;
+  padding: 1/32rem 10/32rem 5/32rem ;
   background-color: #ebf0f0;
   height: 100%;
 }

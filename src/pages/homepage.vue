@@ -2,7 +2,7 @@
    <div id='homepage'>
       <div id='tagList'>
     <!--  <router-link :to="{name:'directory',params:{tagName：tag.id}}" v-for='tag in tagList'> -->
-      <li class='tag' v-for='(tag, index) in tagList' :key='index' >{{tag.name}}</li>
+      <li id='tag' v-for='(tag, index) in tagList' :key='index' >{{tag.name}}</li>
     <!-- </router-link> -->
       </div>
       <ul v-if='articleList.length'>
@@ -32,8 +32,9 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang='less' scoped>
 #tagList{
+  margin-top: 1/32rem;
   box-sizing: border-box;
   width: 100%;
   overflow-x:scroll;
@@ -56,7 +57,7 @@ export default {
 }
 
 
-.tag{
+#tag{
   vertical-align:top;
   display: inline-block;
   border: 1/32rem solid black;
