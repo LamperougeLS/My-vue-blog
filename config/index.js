@@ -1,7 +1,8 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
-import proxyConfig from 'proxyconfig.js'
-var path = require('path')
 
+var path = require('path')
+/*var proxyConfig = require('./proxyconfig.js')
+console.log(proxyConfig.proxyList)*/
 module.exports = {
   build: {
     env: require('./prod.env'),
@@ -29,8 +30,8 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      proxyTable: proxyConfig.proxyList
-    },
+/*      proxyTable: proxyConfig.proxyList
+*/    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
