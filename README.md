@@ -1,7 +1,7 @@
 # my-vue-blog
 
 > A Vue.js project
-
+ 简易博客系统，预计前后端分离实现
 ## Build Setup
 
 ``` bash
